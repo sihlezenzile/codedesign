@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zenzile.design.test.designprinciples.isp.correction;
+package com.zenzile.design.test.designprinciples.dip.correction;
 
 import com.zenzile.codedesign.config.AppConfigCorrecion;
-import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.Newcustomer;
-import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.RegularCustomer;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Sport;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Soccer;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Sport;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Cricket;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -22,24 +24,29 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author SIHLE
  */
 public class CorrectionTest {
-    
     private ApplicationContext ctx;
-    private Newcustomer newc;
-    private RegularCustomer reg;
+    Sport sport1;
+    Sport sport2;
+    
     
     public CorrectionTest() {
     }
     
+    
     @Before
     public void setUp() {
         ctx = new AnnotationConfigApplicationContext(AppConfigCorrecion.class);
-        newc = (Newcustomer)ctx.getBean("newcus");
-        reg = (RegularCustomer)ctx.getBean("regcus");
+        sport1 = (Sport)ctx.getBean("dipsoccer");
+        sport2 = (Sport)ctx.getBean("dipcricket");
     }
     
-    @Test
-    public void testIsp()
-    {
-
+    @After
+    public void tearDown() {
     }
+    @Test
+    public void testSport()
+    {
+        
+    }
+    
 }

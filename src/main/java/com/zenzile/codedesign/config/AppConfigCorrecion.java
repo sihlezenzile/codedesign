@@ -8,6 +8,9 @@ package com.zenzile.codedesign.config;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.Impl.NewcustomerImp;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.Impl.RegularCustomerImpl;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.Newcustomer;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Cricket;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Sport;
+import com.zenzile.codedesign.softwaredesignprinciples.dip.correction.Soccer;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.correction.RegularCustomer;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.violation.Impl.SalonCharge;
 import com.zenzile.codedesign.softwaredesignprinciples.isp.violation.Salon;
@@ -35,5 +38,15 @@ public class AppConfigCorrecion {
     public Salon geCharge()
     {
         return new SalonCharge();
+    }
+    @Bean(name="dipcricket")
+    public Sport getCriket()
+    {
+        return new Cricket();
+    }
+    @Bean(name="dipsoccer")
+    public Sport getSoccer()
+    {
+        return new Soccer();
     }
 }
